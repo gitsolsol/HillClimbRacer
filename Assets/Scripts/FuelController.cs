@@ -8,7 +8,7 @@ public class FuelController : MonoBehaviour
     public static FuelController instance;
 
     [SerializeField] private Image _fuelImage;
-    [SerializeField, Range(0.1f, 5f)] private float _fuelDrainSpeed = 1f;
+    [SerializeField, Range(0.1f, 5f)] private float _fuelDrainSpeed = 10f;
     [SerializeField] private float _maxFuelAmount = 100f;
     [SerializeField] private Gradient _fuelGradient;
 
