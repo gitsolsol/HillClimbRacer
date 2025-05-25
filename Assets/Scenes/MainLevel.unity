@@ -1310,7 +1310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1202587105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,7 +2093,7 @@ MonoBehaviour:
   distance: {fileID: 1706344997}
   _gameOverCanvas: {fileID: 1202587104}
   distanceText: {fileID: 1725891120}
-  distanceVector: {x: 0, y: 0}
+  Instance: {fileID: 0}
   score: 0
   highScore: {fileID: 891495161}
 --- !u!114 &1648056265
@@ -2110,7 +2110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _distanceText: {fileID: 1706344997}
   _playerTrans: {fileID: 1864356398}
-  distance2: {x: 0, y: 0}
+  _highScore: 0
+  distance: {x: 0, y: 0}
 --- !u!1 &1706344995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,7 +2687,7 @@ MonoBehaviour:
   distance: {fileID: 1706344997}
   _gameOverCanvas: {fileID: 0}
   distanceText: {fileID: 0}
-  distanceVector: {x: 0, y: 0}
+  Instance: {fileID: 0}
   score: 0
   highScore: {fileID: 0}
 --- !u!1 &1967749401

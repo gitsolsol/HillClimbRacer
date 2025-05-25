@@ -8,9 +8,12 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    [SerializeField] private TextMeshProUGUI distance = DisplayDistance.distanceText._distanceText;
+    [SerializeField] private TextMeshProUGUI distance = DisplayDistance.instance._distanceText;
     [SerializeField] private GameObject _gameOverCanvas;
     [SerializeField] private TextMeshProUGUI distanceText;
+    public DisplayDistance Instance = DisplayDistance.instance;
+    public float score = 0; 
+    [SerializeField] private TextMeshProUGUI highScore;
 
     public void Awake()
     {
@@ -27,6 +30,11 @@ public class GameManager : MonoBehaviour
         _gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
         distanceText.text = distance.text;
+        Instance.GetHighScore();
+        score = Instance._highScore;
+        print(score);
+        highScore.text = "High Score: " + score.ToString("F0") + "m";
+
     }
 
     public void RestartGame()
