@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FuelController : MonoBehaviour
 {
-    public static FuelController Instance;
+    public static FuelController instance;
 
     [SerializeField] private Image _fuelImage;
     [SerializeField, Range(0.1f, 5f)] private float _fuelDrainSpeed = 1f;
@@ -16,9 +16,9 @@ public class FuelController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
         }
     }
 
@@ -43,5 +43,11 @@ public class FuelController : MonoBehaviour
     {
         _fuelImage.fillAmount = _currentFuelAmount / _maxFuelAmount;
         _fuelImage .color = _fuelGradient.Evaluate(_fuelImage.fillAmount);
+    }
+
+    public void FillFuel()
+    {
+        _currentFuelAmount = _maxFuelAmount;
+        UpdateUI();
     }
 }
