@@ -6,8 +6,9 @@ using TMPro;
 
 public class DisplayDistance : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _distanceText;
+    [SerializeField] public TextMeshProUGUI _distanceText;
     [SerializeField] private Transform _playerTrans;
+    public static DisplayDistance distanceText;
 
     private Vector2 _startPosition; 
 
