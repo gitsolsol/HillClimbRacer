@@ -32,6 +32,11 @@ public class FuelController : MonoBehaviour
     {
         _currentFuelAmount -= _fuelDrainSpeed * Time.deltaTime;
         UpdateUI();
+
+        if(_currentFuelAmount <= 0f)
+        {
+            GameManager.instance.GameOver();
+        }
     }
 
     private void UpdateUI()
