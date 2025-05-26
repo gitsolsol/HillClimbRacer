@@ -30,11 +30,10 @@ public class GameManager : MonoBehaviour
         _gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
         distanceText.text = distance.text;
-        Instance.GetHighScore();
-        score = Instance._highScore;
         print(score);
         highScore.text = "High Score: " + score.ToString("F0") + "m";
-
+        Instance.GetHighScore();
+        score = Instance._highScore;
     }
 
     public void RestartGame()

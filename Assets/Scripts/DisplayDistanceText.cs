@@ -19,7 +19,7 @@ public class DisplayDistance : MonoBehaviour
         _startPosition = _playerTrans.position;
     }
 
-    private void Update()
+    public void Update()
     { 
         distance = (Vector2)_playerTrans.position - _startPosition;
         distance.y = 0f; 
@@ -28,9 +28,7 @@ public class DisplayDistance : MonoBehaviour
         {
            distance.x = 0;
         }
-
         _distanceText.text = distance.x.ToString("F0") + "m";
-        print(_highScore);
     }
 
     public void GetHighScore()
