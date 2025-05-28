@@ -25,7 +25,7 @@ public class DisplayDistance : MonoBehaviour
     private void Start()
     {
         _startPosition = _playerTrans.position;
-        //_highScore = PlayerPrefs.GetFloat("HighScore", 0f);
+        _highScore = PlayerPrefs.GetFloat("HighScore", 0f);
     }
 
     public void Update()
@@ -47,9 +47,13 @@ public class DisplayDistance : MonoBehaviour
        if(distance.x > _highScore)
         {
             _highScore = distance.x;
-            //PlayerPrefs.SetFloat("HighScore", _highScore); // Save new high score
-            //PlayerPrefs.Save();
+            PlayerPrefs.SetFloat("HighScore", _highScore);
+            PlayerPrefs.Save();
         }
     }
-    
+    public void ResetHighScore()
+    {
+        PlayerPrefs.DeleteKey("HighScore");
+    }
+
 }
