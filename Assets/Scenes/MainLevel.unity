@@ -5991,6 +5991,7 @@ GameObject:
   - component: {fileID: 2093430751}
   - component: {fileID: 2093430752}
   - component: {fileID: 2093430753}
+  - component: {fileID: 2093430754}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -6224,6 +6225,20 @@ PolygonCollider2D:
       - {x: 0.48999998, y: 0.14999999}
       - {x: 0.45, y: 0.14999999}
   m_UseDelaunayMesh: 0
+--- !u!114 &2093430754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093430750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6408fad7d116d4ea5954b7a8be0b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehicleDataset: {fileID: 11400000, guid: 59562d7f0a4d3da4fa96fdc88a017c90, type: 2}
+  artworkSprite: {fileID: 2093430752}
 --- !u!1001 &1667644893239373313
 PrefabInstance:
   m_ObjectHideFlags: 0
