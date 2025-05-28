@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         DisplayDistance.instance.GetHighScore();
         score = DisplayDistance.instance._highScore;
         highScore.text = "High Score: " + score.ToString("F0") + "m";
-        DisplayDistance.instance.ResetHighScore();
+        //DisplayDistance.instance.ResetHighScore();
     }
 
     public void RestartGame()
