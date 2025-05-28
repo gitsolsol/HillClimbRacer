@@ -26,6 +26,7 @@ public class DisplayDistance : MonoBehaviour
     {
         _startPosition = _playerTrans.position;
         _highScore = PlayerPrefs.GetFloat("HighScore", 0f);
+        distance = Vector2.zero;
     }
 
     public void Update()
