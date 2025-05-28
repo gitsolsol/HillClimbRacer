@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI distance = DisplayDistance.instance._distanceText;
     [SerializeField] private GameObject _gameOverCanvas;
     [SerializeField] private TextMeshProUGUI distanceText;
-    public DisplayDistance Instance = DisplayDistance.instance;
     public float score = 0; 
     [SerializeField] private TextMeshProUGUI highScore;
 
@@ -29,11 +28,11 @@ public class GameManager : MonoBehaviour
     {
         _gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
-        distanceText.text = distance.text;
-        print(score);
+        distanceText.text = distance.text;       
+        DisplayDistance.instance.GetHighScore();
+        score = DisplayDistance.instance._highScore;
         highScore.text = "High Score: " + score.ToString("F0") + "m";
-        Instance.GetHighScore();
-        score = Instance._highScore;
+        //DisplayDistance.instance.ResetHighScore();
     }
 
     public void RestartGame()
