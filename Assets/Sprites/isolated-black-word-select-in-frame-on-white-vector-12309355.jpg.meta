@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      isolated-black-word-select-in-frame-on-white-vector-12309355_0: 1346390335106901417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
